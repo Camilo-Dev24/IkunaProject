@@ -1,25 +1,21 @@
 package org.surotec.ikunaproject.aplication;
 
 import org.surotec.ikunaproject.roll.Admin;
-import org.surotec.ikunaproject.roll.Client;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class MenuAdmin {
 
-    Admin admin = new Admin("ramon@gmail.com","Tula123","Ramon Colorado");
+    Admin admin = new Admin();
 
-    public void menuAdmin(){
-        if (admin.getEmail().equals("ramon@gmail.com") && admin.getPassword().equals("Tula123")){
+    public void showMenuAdmin(Scanner input, String email, String password) {
+        if (admin.getEmail() != null && admin.getEmail().equals(email)
+                && admin.getPassword() != null && admin.getPassword().equals(password)) {
             System.out.println("Bienvenido al sistema " + admin.getName());
-        }else {
+        } else {
             System.out.println("Usuario Incorrecto");
         }
     }
 
-    public Client[] seeClients(Client[] clients){
-        return clients;
-    }
 
 }

@@ -32,4 +32,8 @@ public class User {
         return email;
     }
 
+    public void viewPurchases(){
+
+    }
+
 }

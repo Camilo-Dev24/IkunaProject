@@ -18,4 +18,8 @@ public class Client extends User{
             System.out.println("Proporcione el correo y la contraseña ");
         }
     }
+
+    public void viewPurchases(){
+
+    }
 }
