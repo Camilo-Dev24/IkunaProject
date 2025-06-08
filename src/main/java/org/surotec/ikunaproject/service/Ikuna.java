@@ -26,13 +26,14 @@ public class Ikuna {
              op = entrada.nextInt();
              entrada.nextLine();
             switch (op){
+                //MENU DEL ADMINISTRADOR
                 case 1->{
                     System.out.println("Ingrese su correo electronico de administrador");
                     String correo = entrada.nextLine();
                     System.out.println("Ingrese su contraseña");
                     String password1 =entrada.nextLine();
                     if (correo.equalsIgnoreCase(emailAdmin) && password1.equals(passwordAdmin)){
-                        int menuUser;
+                        int menuAdmin;
                         do {
                         System.out.println("""
                                 **********Bienvenido al sistema de administrador Colectivo Ikuna*********
@@ -45,8 +46,9 @@ public class Ikuna {
                                 6-Ver compras de clientes
                                 7-salir 
                                 """);
-                        menuUser = entrada.nextInt();
-                        switch (menuUser){
+                        menuAdmin = entrada.nextInt();
+                        entrada.nextLine();
+                        switch (menuAdmin){
                             case 1->{
 
                             }
@@ -66,22 +68,54 @@ public class Ikuna {
 
                             }
                             case 7->{
-                                menuUser =7;
+                                menuAdmin =7;
                                 System.out.println("Saliendo del menu clientes");
                             }
                             default -> System.out.println("Error al ingresar el dato");
                         }
 
-                        }while (menuUser!=7);
+                        }while (menuAdmin!=7);
                     } else {
                         System.out.println("No tiene credenciales para el modulo administrativo");
                     }
                 }
+                //MENU DEL USUARIO
                 case 2->{
+                    int menuUser;
+                    do {
                     System.out.println("""
                             **********Bienvenido al modulo de clientes del Colectivo Ikuna********
-                            Elija la opcion que de la cual necesita más información
+                            Elija la opcion de su interes para obtenr más información
+                            1-Registrarse
+                            2-Ver productos y servicios
+                            3-Comprar Productos/servicios
+                            4-Ver mis compras
+                            5-Salir
                             """);
+                    menuUser = entrada.nextInt();
+                    entrada.nextLine();
+
+                    switch (menuUser){
+                        case 1->{
+
+                        }
+                        case 2->{
+
+                        }
+                        case 3->{
+
+                        }
+                        case 4->{
+
+                        }
+                        case 5->{
+                            menuUser = 5;
+                            System.out.println("Saliendo del modulo clientes");
+                        }
+                    }
+
+                    }while (menuUser!=5);
+
 
                 }
                 case 3->{
