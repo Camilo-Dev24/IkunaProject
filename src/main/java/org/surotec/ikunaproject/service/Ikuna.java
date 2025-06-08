@@ -10,9 +10,22 @@ public class Ikuna {
         String emailAdmin = "Juan22@gmail.com", passwordAdmin = "juanito20";
         String[] userName = new String[10];
         String[] emailUser = new String[10];
+        String[] password = new String[10];
         String[] phone = new String[10];
-        String [] produtosIkuna = new String[10];
-        String [] descrProducIkuna=new String[10];
+
+        //PRODUCTOS IKUNA
+        String[] produtosIkuna = {"Libretas artisticas", "Obras en lienzo", "Asesorias artisticas", "Asesorias administrativas", "Planeación de eventos"};
+
+        String[] descrProducIkuna= new String [10];
+        descrProducIkuna[0] = "Libretas artisticas con diseños personalizados. Perfectas para relizar regalos";
+        descrProducIkuna[1] = "Obra artistica realizada en lienzo(diseño unico y personalziado)";
+        descrProducIkuna[2] = "Asesoria en diseño de piezas gráficas, diseño de obras en lienzo, dibujos";
+        descrProducIkuna[3]= "Asesoria en el diseño y desarrollo de proyectos culturales";
+        descrProducIkuna[4] = "Planeación y organziación logistica de eventos culturales y artisticos";
+
+        double[] precioProductos = {40000.00, 700000.00, 300000.00,250000.00,800000.00};
+
+
         int op;
 
         do {
@@ -97,10 +110,28 @@ public class Ikuna {
 
                     switch (menuUser){
                         case 1->{
-
+                            for (int i=0;i<userName.length;i++){
+                            System.out.println("""
+                                    Para el registrar su usuario so necesarios los siguientes datos:
+                                    A)Ingrese su nombre completo
+                                    """);
+                            userName[i] = entrada.nextLine();
+                                System.out.println("Ingrese su numer de telefono");
+                                phone[i] = entrada.nextLine();
+                                System.out.println("Ingrese su email");
+                                emailUser[i]=entrada.nextLine();
+                                System.out.println("Ingrese la contraseña");
+                                password[i] = entrada.nextLine();
+                                i = userName.length +1; //salir del for
+                            }
+                            System.out.println("Usuario creado correctamente");
                         }
                         case 2->{
-
+                            System.out.println("  En este modulo encontrará los servicios productos y servicios del Colectivo IKuna");
+                            System.out.println("*****Listas productos***** ");
+                            for (int j = 0; j<produtosIkuna.length; j++){
+                                System.out.println(j+1 + "- PRODUCTO: " + produtosIkuna[j] + "\n" + "DESCRIPCION: " + descrProducIkuna[j] + "\n" + "PRECIO " +  precioProductos[j]);
+                            }
                         }
                         case 3->{
 
@@ -129,5 +160,6 @@ public class Ikuna {
         }while (op!=3);
 
     }
+
 
 }
