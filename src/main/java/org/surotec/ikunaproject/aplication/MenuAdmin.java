@@ -11,9 +11,9 @@ public class MenuAdmin {
     public void showMenuAdmin(Scanner input, String email, String password) {
         if (admin.getEmail() != null && admin.getEmail().equals(email)
                 && admin.getPassword() != null && admin.getPassword().equals(password)) {
-            System.out.println("Bienvenido al sistema " + admin.getName());
+            System.out.println("Bienvenido al sistema " + admin.getName() + "\n");
         } else {
-            System.out.println("Usuario Incorrecto");
+            System.out.println("Usuario Incorrecto\n");
         }
     }
 

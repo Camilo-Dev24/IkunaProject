@@ -10,6 +10,15 @@ public class Client extends User{
         this.phone = phone;
         this.age = age;
     }
+    public Client(){};
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public void RegisterUser(Client client){
         if (client != null){
