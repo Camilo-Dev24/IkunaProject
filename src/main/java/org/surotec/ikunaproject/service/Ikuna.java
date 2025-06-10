@@ -220,7 +220,7 @@ public class Ikuna {
                         }
                     } while (menuUser != 5);
                 }
-            }
+            } 
         } while (op != 3);
     }
 }
